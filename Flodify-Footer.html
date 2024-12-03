@@ -25,7 +25,7 @@
             display: flex;
             flex: 1; /* Takes all available vertical space except for the footer */
             justify-content: space-between;
-            align-items: center;
+            align-items: stretch; /* Aligns sections evenly vertically */
             width: 100%;
             max-width: 1200px;
             padding: 20px;
@@ -35,16 +35,38 @@
         /* Left Section (Logo) */
         .left-section {
             flex: 1 1 auto; /* Adjusts to available space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .left-section img {
-            max-width: 514px; /* Max logo size */
+            max-width: 300px; /* Max logo size */
             height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Center Section (Copyright) */
+        .center-section {
+            flex: 1 1 auto; /* Adjusts to available space */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Stays bottom-aligned */
+            text-align: center;
+        }
+
+        .center-section p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: bold; /* Makes the text bold */
         }
 
         /* Right Section (Contact Information) */
         .right-section {
             flex: 1 1 auto; /* Adjusts to available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
             text-align: right;
             line-height: 1.8;
             font-size: 1.1em;
@@ -52,22 +74,10 @@
             word-wrap: break-word; /* Prevents overflow */
             color: #1A3B6E;
             font-weight: bold; /* Makes the text bold */
-
-       }
+        }
 
         .right-section p {
             margin: 0;
-        }
-
-        /* Footer Section */
-        .footer {
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1.1em;
-            background: linear-gradient(90deg, #1A3B6E, #D7E0ED); /* Extends gradient to the footer */
-            box-sizing: border-box;
-            font-weight: bold; /* Makes the text bold */
         }
 
         /* Hyperlinks */
@@ -82,12 +92,20 @@
                 flex-direction: column; /* Stacks sections vertically */
                 text-align: center;
             }
+
+            .left-section img {
+                max-width: 200px; /* Smaller logo for narrow screens */
+            }
+
             .right-section {
                 text-align: center;
                 margin-top: 10px;
+                align-items: center;
             }
-            .left-section img {
-                max-width: 300px; /* Smaller logo for narrow screens */
+
+            .center-section {
+                align-items: center;
+                margin-top: 10px;
             }
         }
     </style>
@@ -99,6 +117,11 @@
             <img src="https://i0.wp.com/equitify.us/wp-content/uploads/2024/05/cerifications-1.png?w=969&ssl=1" alt="Certifications">
         </div>
 
+        <!-- Center Section -->
+        <div class="center-section">
+            <p>Copyright © 2024 EquitiFy</p>
+        </div>
+
         <!-- Right Section -->
         <div class="right-section">
             <p>
@@ -108,11 +131,6 @@
                 Pleasant Hill, CA 94523
             </p>
         </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>Copyright © 2024 EquitiFy</p>
     </div>
 </body>
 </html>
