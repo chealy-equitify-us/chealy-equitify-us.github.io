@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flodify Footer</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #1A3B6E, #D7E0ED); /* Gradient for full page */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            box-sizing: border-box;
+        }
+
+        /* Main Container */
+        .main-container {
+            display: flex;
+            flex: 1; /* Takes all available vertical space except for the footer */
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Left Section (Logo) */
+        .left-section {
+            flex: 1 1 auto; /* Adjusts to available space */
+        }
+
+        .left-section img {
+            max-width: 300px; /* Max logo size */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Right Section (Contact Information) */
+        .right-section {
+            flex: 1 1 auto; /* Adjusts to available space */
+            text-align: right;
+            line-height: 1.8;
+            font-size: 0.9em;
+            min-width: 200px;
+            word-wrap: break-word; /* Prevents overflow */
+            color: #1A3B6E;
+       }
+
+        .right-section p {
+            margin: 0;
+        }
+
+        /* Footer Section */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            background: linear-gradient(90deg, #1A3B6E, #D7E0ED); /* Extends gradient to the footer */
+            box-sizing: border-box;
+        }
+
+        /* Hyperlinks */
+        .right-section a {
+            color: #1A3B6E;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Styles */
+            .main-container {
+                flex-direction: column; /* Stacks sections vertically */
+                text-align: center;
+            }
+            .right-section {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .left-section img {
+                max-width: 200px; /* Smaller logo for narrow screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="https://i0.wp.com/equitify.us/wp-content/uploads/2024/05/cerifications-1.png?w=969&ssl=1" alt="Certifications">
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <p>
+                <a href="https://www.equitify.us">www.equitify.us</a><br>
+                (925) 222-5598<br>
+                2300 Contra Costa Blvd., Suite 200,<br>
+                Pleasant Hill, CA 94523
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Copyright © 2024 EquitiFy</p>
+    </div>
+</body>
+</html>
