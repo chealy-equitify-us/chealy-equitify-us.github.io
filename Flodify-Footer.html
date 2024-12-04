@@ -68,7 +68,7 @@
             justify-content: center;
             align-items: flex-end;
             text-align: right;
-            line-height: 1.8;
+            line-height: 1.1; /* Reduced line spacing */
             font-size: 1.1em;
             min-width: 200px;
             word-wrap: break-word; /* Prevents overflow */
@@ -77,7 +77,15 @@
         }
 
         .right-section p {
-            margin: 0;
+            margin: -5px 0; /* Reduces space between paragraphs */
+            display: flex;
+            align-items: center;
+        }
+
+        .right-section img {
+            width: 60px; /* Double the icon size */
+            height: 60px; /* Double the icon size */
+            margin-right: 8px; /* Space between icon and text */
         }
 
         /* Hyperlinks */
@@ -125,8 +133,15 @@
         <!-- Right Section -->
         <div class="right-section">
             <p>
-                <a href="https://www.equitify.us">www.equitify.us</a><br>
-                (925) 222-5598<br>
+                <img src="Website%20Icon.png" alt="Website Icon">
+                <a href="https://www.equitify.us">www.equitify.us</a>
+            </p>
+            <p>
+                <img src="Phone%20Icon.png" alt="Phone Icon">
+                (925) 222-5598
+            </p>
+            <p>
+                <img src="Address%20Icon.png" alt="Address Icon">
                 2300 Contra Costa Blvd., Suite 200<br>
                 Pleasant Hill, CA 94523
             </p>
